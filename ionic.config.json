@@ -1,0 +1,8 @@
+{
+  "name": "blablafake",
+  "app_id": "7f509ef6",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
