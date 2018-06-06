@@ -21,38 +21,38 @@
 
 
 <ion-content padding>
-  <ion-list color="primary">
-    <ion-item>
-      <ion-label>
+  <ion-list >
+    <ion-item >
+      <ion-label color="primary">
         Nom :
       </ion-label>
-      <ion-input type="text" placeholder="Saisir votre nom"></ion-input>
+      <ion-input type="text" placeholder="Saisir votre nom" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>
+      <ion-label color="primary">
         Prénom :
       </ion-label>
-      <ion-input type="text" placeholder="Saisir votre prénom"></ion-input>
+      <ion-input type="text" placeholder="Saisir votre prénom" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>
+      <ion-label color="primary">
         Adresse Mail :
       </ion-label>
-      <ion-input type="email" placeholder="Saisir votre mail"></ion-input>
+      <ion-input type="email" placeholder="Saisir votre mail" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>
+      <ion-label color="primary">
         Mot de passe :
       </ion-label>
-      <ion-input type="password" placeholder="Saisir votre mot de passe"></ion-input>
+      <ion-input type="password" placeholder="Saisir votre mot de passe" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>
+      <ion-label color="primary">
         Date de naissance :
       </ion-label>
-      <ion-input  type="number" placeholder="Saisir votre date de naissance"></ion-input>
-      <ion-datetime displayFormat="DD-MM-YYYY HH:mm" [(ngModel)]="today"></ion-datetime>
+      <ion-input [(ngModel)]="today" placeholder="today" type="date" required ></ion-input>
     </ion-item>
   </ion-list>
+  <button ion-button round color="primary" align="center" >S'enregistrer</button>
 
 </ion-content>
