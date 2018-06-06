@@ -7,11 +7,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import {LoginPage} from "../pages/login/login";
 import {DatePicker} from "@ionic-native/date-picker";
+import {SignupPage} from "../pages/signup/signup";
 
 @NgModule({
   declarations: [
     MyApp,
-    LoginPage
+    LoginPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,8 @@ import {DatePicker} from "@ionic-native/date-picker";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    LoginPage
+    LoginPage,
+    SignupPage
   ],
   providers: [
     StatusBar,
