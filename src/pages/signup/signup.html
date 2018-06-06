@@ -21,7 +21,7 @@
 
 
 <ion-content padding>
-  <ion-list>
+  <ion-list color="primary">
     <ion-item>
       <ion-label>
         Nom :
@@ -50,7 +50,8 @@
       <ion-label>
         Date de naissance :
       </ion-label>
-      <ion-input type="number" placeholder="Saisir votre date de naissance"></ion-input>
+      <ion-input  type="number" placeholder="Saisir votre date de naissance"></ion-input>
+      <ion-datetime displayFormat="DD-MM-YYYY HH:mm" [(ngModel)]="today"></ion-datetime>
     </ion-item>
   </ion-list>
 

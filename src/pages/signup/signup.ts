@@ -14,8 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'signup.html',
 })
 export class SignupPage {
-
+  today
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    this.today = new Date().toISOString();
   }
 
   ionViewDidLoad() {
