@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import {LoginPage} from "../pages/login/login";
 import {DatePicker} from "@ionic-native/date-picker";
 import {SignupPage} from "../pages/signup/signup";
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {SignupPage} from "../pages/signup/signup";
     StatusBar,
     SplashScreen,
     DatePicker,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthServiceProvider
   ]
 })
 export class AppModule {}
