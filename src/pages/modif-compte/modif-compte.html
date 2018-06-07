@@ -1,0 +1,50 @@
+<!--
+  Generated template for the ModifComptePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>modifCompte</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #signupForm="ngForm" novalidate>
+    <ion-item >
+      <ion-label color="primary">
+        Nom :
+      </ion-label>
+      <ion-input name="sName" [(ngModel)]="sName" type="text" placeholder="Saisir votre nom" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">
+        Prénom :
+      </ion-label>
+      <ion-input name="fName" [(ngModel)]="fName" required type="text" placeholder="Saisir votre prénom" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">
+        Adresse Mail :
+      </ion-label>
+      <ion-input name="mail" [(ngModel)]="mail" required type="email" placeholder="Saisir votre mail" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">
+        Mot de passe :
+      </ion-label>
+      <ion-input name="psw" [(ngModel)]="psw" required type="password" placeholder="Saisir votre mot de passe" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">
+        Date de naissance :
+      </ion-label>
+      <ion-input required name="ddn" [(ngModel)]="ddn" type="date"></ion-input>
+    </ion-item>
+  </form>
+
+</ion-content>

@@ -31,7 +31,7 @@
   <ion-grid >
     <ion-row align-items-center>
       <ion-col col-12 align="center">
-        <button ion-button round color="danger">Annuler</button>
+        <button ion-button round color="danger">Bouton</button>
         <button ion-button round color="primary" (click)="onClickSeConnecter()">Se Connecter</button>
       </ion-col>
     </ion-row>
@@ -39,7 +39,11 @@
       <ion-col col-12 align="center">
         <label>Pas encore inscrit ?</label>
         <button ion-button round color="dark" (click)="onClickSinscrire()">S'inscrire</button>
-
+      </ion-col>
+    </ion-row>
+    <ion-row align-items-center align="center">
+      <ion-col col-12 align="center">
+        <button ion-button round color="secondary" (click)="onClickModifCompte()"></button>
       </ion-col>
     </ion-row>
   </ion-grid>
