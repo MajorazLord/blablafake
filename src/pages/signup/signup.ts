@@ -15,9 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SignupPage {
   today : Date ;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  nom : String;
+  prenom : String;
+  mail : String;
+  mdp : String;
+  age : String;
+  constructor(public navCtrl: NavController, public navParams: NavParams ) {
 
     this.today = new Date();
+
   }
 
   ionViewDidLoad() {
