@@ -21,37 +21,41 @@
 
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label>
+  <ion-list >
+    <ion-item >
+      <ion-label color="primary">
         Nom :
       </ion-label>
-      <ion-input type="text" placeholder="Saisir votre nom"></ion-input>
+      <ion-input [(ngModel)]="nom" type="text" placeholder="Saisir votre nom" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>
+      <ion-label color="primary">
         Prénom :
       </ion-label>
-      <ion-input type="text" placeholder="Saisir votre prénom"></ion-input>
+      <ion-input [(ngModel)]="prenom" required type="text" placeholder="Saisir votre prénom" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>
+      <ion-label color="primary">
         Adresse Mail :
       </ion-label>
-      <ion-input type="email" placeholder="Saisir votre mail"></ion-input>
+      <ion-input [(ngModel)]="mail" required type="email" placeholder="Saisir votre mail" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>
+      <ion-label color="primary">
         Mot de passe :
       </ion-label>
-      <ion-input type="password" placeholder="Saisir votre mot de passe"></ion-input>
+      <ion-input [(ngModel)]="mdp" required type="password" placeholder="Saisir votre mot de passe" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>
+      <ion-label color="primary">
         Date de naissance :
       </ion-label>
-      <ion-input type="number" placeholder="Saisir votre date de naissance"></ion-input>
-    </ion-item>
+      <ion-input required  [(ngModel)]="age" type="date"  ></ion-input>
+    </ion-item>0
   </ion-list>
+  <ion-grid>
+    <button ion-button round color="primary" >S'enregistrer</button>
+  </ion-grid>
+
 
 </ion-content>
