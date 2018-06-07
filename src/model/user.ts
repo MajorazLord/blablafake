@@ -1,17 +1,31 @@
+import {StorageProvider} from "../providers/storage/storage";
+
 export class User{
 
-  email: string;
-  password: string;
-  firstName: string;
-  surname: string;
-  birthdayDate: Date;
-
-  constructor(mail: string, psw: string, fName: string, sName: string, bDate : Date){
-    this.email = mail;
-    this.password = psw;
-    this.firstName = fName;
-    this.surname = sName;
-    this.birthdayDate = bDate;
+  constructor(public mail: string, public psw: string, public fName: string, public sName: string, public bDate : Date, private storageProvider : StorageProvider){
   }
+
+  get(){
+    this.storageProvider.getValue('user').then(user => {
+      this.fName = user.fName;
+      this.sName = user.sName;
+      this.mail = user.mail;
+      this.psw = user.psw;
+      this.bDate = user.bDate;
+    });
+  }
+
+  save(){
+    this.storageProvider.setValue('user', {
+      fName : this.fName,
+      sName : this.sName,
+      mail : this.mail,
+      psw : this.psw,
+      bDate : this.bDate
+    });
+  }
+
+
+
 
 }

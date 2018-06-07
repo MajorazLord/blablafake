@@ -9,6 +9,7 @@ import {LoginPage} from "../pages/login/login";
 import {DatePicker} from "@ionic-native/date-picker";
 import {SignupPage} from "../pages/signup/signup";
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { StorageProvider } from '../providers/storage/storage';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     SplashScreen,
     DatePicker,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthServiceProvider
+    AuthServiceProvider,
+    StorageProvider
   ]
 })
 export class AppModule {}
