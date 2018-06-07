@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {FormControl, FormControlName, FormGroup, NgForm} from "@angular/forms";
+import {LoginPage} from "../login/login";
 
 /**
  * Generated class for the SignupPage page.
@@ -15,19 +17,32 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SignupPage {
   today : Date ;
-  nom : String;
-  prenom : String;
-  mail : String;
-  mdp : String;
-  age : String;
+  mail: string;
+  psw: string;
+  fName: string;
+  sName: string;
+  bDate: Date;
+  submitted = false;
   constructor(public navCtrl: NavController, public navParams: NavParams ) {
 
     this.today = new Date();
 
   }
 
+  onSignup(form: NgForm) {
+    this.submitted = true;
+
+    if (form.valid) {
+      this.navCtrl.push(LoginPage);
+    }
+  }
+
+
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
   }
+
+
 
 }
