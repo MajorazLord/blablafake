@@ -50,11 +50,11 @@
       <ion-label color="primary">
         Date de naissance :
       </ion-label>
-      <ion-input required  [(ngModel)]="age" type="date"  ></ion-input>
-    </ion-item>0
+      <ion-input required  [(ngModel)]="ddn" type="date" ></ion-input>
+    </ion-item>
   </ion-list>
   <ion-grid>
-    <button ion-button round color="primary" >S'enregistrer</button>
+    <button ion-button round color="primary" (click)="signup()">S'enregistrer</button>
   </ion-grid>
 
 

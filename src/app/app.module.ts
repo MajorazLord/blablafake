@@ -10,12 +10,14 @@ import {DatePicker} from "@ionic-native/date-picker";
 import {SignupPage} from "../pages/signup/signup";
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { StorageProvider } from '../providers/storage/storage';
+import {ModifComptePage} from "../pages/modif-compte/modif-compte";
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
-    SignupPage
+    SignupPage,
+    ModifComptePage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { StorageProvider } from '../providers/storage/storage';
   entryComponents: [
     MyApp,
     LoginPage,
-    SignupPage
+    SignupPage,
+    ModifComptePage
   ],
   providers: [
     StatusBar,

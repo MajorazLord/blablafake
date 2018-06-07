@@ -19,8 +19,8 @@ export class SignupPage {
   prenom : String;
   mail : String;
   mdp : String;
-  age : String;
-  constructor(public navCtrl: NavController, public navParams: NavParams ) {
+  ddn : Date;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
 
     this.today = new Date();
 
@@ -29,5 +29,6 @@ export class SignupPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
   }
+
 
 }

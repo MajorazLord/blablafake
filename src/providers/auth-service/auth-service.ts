@@ -15,7 +15,7 @@ export class AuthServiceProvider {
         // At this point make a request to your backend to make a real check!
         let access = (credentials.password === "pass" && credentials.email === "email");
         //TODO Faire la connection
-        this.currentUser = new User('Simon', 'saimon@devdactic.com', '','', new Date(2018,6,6));
+        //this.currentUser = new User('Simon', 'saimon@devdactic.com', '','', new Date(2018,6,6));
         observer.next(access);
         observer.complete();
       });
