@@ -23,9 +23,7 @@ export class SignupPage {
   sName: string;
   bDate: Date;
   submitted = false;
-  constructor(public navCtrl: NavController, public navParams: NavParams ) {
-
-    this.today = new Date();
+  constructor(public navCtrl: NavController, public navParams: NavParams ) {;
 
   }
 
@@ -42,7 +40,6 @@ export class SignupPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
   }
-
 
 
 }
