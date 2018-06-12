@@ -20,41 +20,43 @@
 </ion-header>
 
 <ion-content padding>
-<form #signupForm="ngForm" novalidate>
+<!--<form #signupForm="ngForm" novalidate>-->
+  <form [formGroup]="formulaire" (ngSubmit)="signupForm()">
     <ion-list >
       <ion-item >
         <ion-label color="primary">
           Nom :
         </ion-label>
-        <ion-input name="nom" [(ngModel)]="sName" type="text" placeholder="Saisir votre nom" required ></ion-input>
+        <ion-input name="nom" formControlName="sName" type="text" placeholder="Saisir votre nom" required ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary">
           Prénom :
         </ion-label>
-        <ion-input name="prenom" [(ngModel)]="fName" required type="text" placeholder="Saisir votre prénom" ></ion-input>
+        <ion-input name="prenom" formControlName="fName" required type="text" placeholder="Saisir votre prénom" ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary">
           Adresse Mail :
         </ion-label>
-        <ion-input name="mail" [(ngModel)]="mail" required type="email" placeholder="Saisir votre mail" ></ion-input>
+        <ion-input name="mail" formControlName="mail" required type="email" placeholder="Saisir votre mail" ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary">
           Mot de passe :
         </ion-label>
-        <ion-input name="mdp" [(ngModel)]="psw" required type="password" placeholder="Saisir votre mot de passe" ></ion-input>
+        <ion-input name="mdp" formControlName="psw" required type="password" placeholder="Saisir votre mot de passe" ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary">
           Date de naissance :
         </ion-label>
-        <ion-input name="ddn" required  [(ngModel)]="bDate" type="date"  ></ion-input>
+        <ion-input name="ddn" required  formControlName="bDate" type="date"  ></ion-input>
       </ion-item>
     </ion-list>
   <ion-grid>
-    <button ion-button round color="primary" (click)="onSignup(signupForm)" type="submit" block>S'enregistrer</button>
+    <button ion-button round color="primary" type="submit" [disabled]="!formulaire.valid"> S'enregistrer</button>
+    <!--<button ion-button round color="primary" type="submit" block>S'enregistrer</button>-->
   </ion-grid>
 
 
