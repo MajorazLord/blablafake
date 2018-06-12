@@ -5,12 +5,30 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
+
 import {LoginPage} from "../pages/login/login";
 import {DatePicker} from "@ionic-native/date-picker";
 import {SignupPage} from "../pages/signup/signup";
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { StorageProvider } from '../providers/storage/storage';
 import {ModifComptePage} from "../pages/modif-compte/modif-compte";
+
+
+
+import { FirebaseProvider } from '../providers/firebase/firebase';
+import {HttpModule} from "@angular/http";
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+
+const config = {
+  apiKey: "AIzaSyCjTKlLDZUinLq46JRdSGzAAZWnu7fn8OY",
+  authDomain: "ionicproject-66203.firebaseapp.com",
+  databaseURL: "https://ionicproject-66203.firebaseio.com",
+  projectId: "ionicproject-66203",
+  storageBucket: "ionicproject-66203.appspot.com",
+  messagingSenderId: "289406248876"
+};
+
 
 @NgModule({
   declarations: [
@@ -21,7 +39,10 @@ import {ModifComptePage} from "../pages/modif-compte/modif-compte";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(config)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -36,7 +57,8 @@ import {ModifComptePage} from "../pages/modif-compte/modif-compte";
     DatePicker,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider,
-    StorageProvider
+    StorageProvider,
+    FirebaseProvider
   ]
 })
 export class AppModule {}
