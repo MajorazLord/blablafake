@@ -19,6 +19,8 @@ import { FirebaseProvider } from '../providers/firebase/firebase';
 import {HttpModule} from "@angular/http";
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
+import {AngularFireAuth, AngularFireAuthModule} from "angularfire2/auth";
+import {TrajetsPage} from "../pages/trajets/trajets";
 
 const config = {
   apiKey: "AIzaSyCjTKlLDZUinLq46JRdSGzAAZWnu7fn8OY",
@@ -35,21 +37,24 @@ const config = {
     MyApp,
     LoginPage,
     SignupPage,
-    ModifComptePage
+    ModifComptePage,
+    TrajetsPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpModule,
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(config)
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     LoginPage,
     SignupPage,
-    ModifComptePage
+    ModifComptePage,
+    TrajetsPage
   ],
   providers: [
     StatusBar,
