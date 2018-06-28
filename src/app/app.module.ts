@@ -13,22 +13,22 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { StorageProvider } from '../providers/storage/storage';
 import {ModifComptePage} from "../pages/modif-compte/modif-compte";
 
-
-
-import { FirebaseProvider } from '../providers/firebase/firebase';
 import {HttpModule} from "@angular/http";
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import {AngularFireAuth, AngularFireAuthModule} from "angularfire2/auth";
 import {TrajetsPage} from "../pages/trajets/trajets";
+import {AngularFirestoreModule} from "angularfire2/firestore";
+import { FirestoreProvider } from '../providers/firestore/firestore';
+import {AddTrajetPage} from "../pages/add-trajet/add-trajet";
 
 const config = {
-  apiKey: "AIzaSyCjTKlLDZUinLq46JRdSGzAAZWnu7fn8OY",
-  authDomain: "ionicproject-66203.firebaseapp.com",
-  databaseURL: "https://ionicproject-66203.firebaseio.com",
-  projectId: "ionicproject-66203",
-  storageBucket: "ionicproject-66203.appspot.com",
-  messagingSenderId: "289406248876"
+  apiKey: "AIzaSyBHc-RtUeJVhmldE-gYwGHuLAamQuWEzuw",
+  authDomain: "blablafake-37f77.firebaseapp.com",
+  databaseURL: "https://blablafake-37f77.firebaseio.com",
+  projectId: "blablafake-37f77",
+  storageBucket: "blablafake-37f77.appspot.com",
+  messagingSenderId: "720963760668"
 };
 
 
@@ -38,7 +38,8 @@ const config = {
     LoginPage,
     SignupPage,
     ModifComptePage,
-    TrajetsPage
+    TrajetsPage,
+    AddTrajetPage
   ],
   imports: [
     BrowserModule,
@@ -46,7 +47,8 @@ const config = {
     HttpModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(config),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -54,7 +56,8 @@ const config = {
     LoginPage,
     SignupPage,
     ModifComptePage,
-    TrajetsPage
+    TrajetsPage,
+    AddTrajetPage
   ],
   providers: [
     StatusBar,
@@ -63,7 +66,7 @@ const config = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider,
     StorageProvider,
-    FirebaseProvider
+    FirestoreProvider
   ]
 })
 export class AppModule {}

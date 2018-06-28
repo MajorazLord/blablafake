@@ -29,10 +29,12 @@ export class LoginPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder : FormBuilder, private auth: AuthServiceProvider ) {
+
     this.loginForm= this.formBuilder.group({
       mail: ['', Validators.compose([Validators.minLength(1), Validators.pattern('^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$'), Validators.required])],
       psw: ['', Validators.compose([Validators.minLength(8), Validators.required])]
     });
+
     // this.loginForm= new FormGroup({
     //   mail: new  FormControl(),
     //   psw : new  FormControl()
